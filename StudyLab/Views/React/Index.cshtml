@@ -1,0 +1,19 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "ReactJS";
+}
+
+<button class="btn btn-primary addQuestion" type="button">Add a Question</button>
+<div id="page_name" class="btn btn-primary pageName">React</div>
+<div class="jumbotron jumbotron-questions">
+
+    <div class="parent">
+    </div>
+
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/questions")
+}
+
