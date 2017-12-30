@@ -191,4 +191,3 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\System.Xml.XPath
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Microsoft.AspNetCore.JsonPatch.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Microsoft.AspNetCore.JsonPatch.xml
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.Questions.resources
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.csprojResolveAssemblyReference.cache
