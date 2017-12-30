@@ -59,5 +59,10 @@ namespace StudyLab.Services
             dto.ApplyTo(apply);
 
         }
+
+        public IEnumerable<Models.Type> GetTypes()
+        {
+            return _context.Type.ToList();
+        }
     }
 }

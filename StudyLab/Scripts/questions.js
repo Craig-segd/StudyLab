@@ -38,7 +38,7 @@
                 function (result) {
                     if (result) {
                         $.ajax({
-                            url: "/api/questions/javascript/" + button.attr("data-delete-id"),
+                            url: "/api/questions/" + $("#page_name").text() + "/" + button.attr("data-delete-id"),
                             method: "DELETE",
                             success: function () {
                                 toastr.success("Question deleted.");
@@ -51,6 +51,47 @@
                     }
                 });
 
+        });
+
+    // ADD QUESTION LIGHTBOX
+
+    $(".addQuestion").on("click",
+        function (e) {
+            e.preventDefault();
+            $(".light_box").fadeToggle();
+        });
+    $(".close_button").on("click",
+        function () {
+            $(".light_box").fadeToggle();
+
+        });
+
+    // ADD QUESTION (POST)
+
+    $("#submit_form").on("click",
+        function (data) {
+
+            $.ajax({
+                url: "/api/questions",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify([
+                    {
+                        "QuestionText": $("#questionText_input").val(),
+                        "AnswerText": $("#answerText_input").val(),
+                        "TypeId": $(".type").val()
+                    }]),
+                success: function () {
+                    $(".light_box").fadeToggle();
+                },
+                error: function () {
+                    data.preventDefault();
+                    console.log("Error");
+                }
+            });
+             // prevent page refresh
+            //$(".light_box").fadeToggle();
+            //console.log("Sent");
         });
 
     // HIDE/SHOW ANSWERS

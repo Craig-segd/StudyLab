@@ -5,9 +5,36 @@
 }
 
 <button class="btn btn-primary addQuestion" type="button">Add a Question</button>
-<div id="page_name" class="btn btn-primary pageName">MVC</div>
+<div id="page_name" class="btn-primary pageName">MVC</div>
 <div class="jumbotron jumbotron-questions">
+    <div class="light_box">
 
+        <div class="jumbotron jumbotron-add">
+            <div class="close add_close close_button" aria-label="Close">&times;</div>
+
+
+            <form>
+                <div class="form-group">
+                    <label for="questionText_input">Enter a Question</label>
+                    <input type="text" class="form-control center-block" id="questionText_input">
+                </div>
+                <div class="form-group">
+                    <label for="type">Category</label>
+                    <select class="form-control center-block" id="type">
+                        <option>TEST</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="answerText_input">Answer</label>
+                    <textarea class="form-control center-block" rows="5" id="answerText_input"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+
+        </div>
+    </div>
     <div class="parent">
     </div>
 

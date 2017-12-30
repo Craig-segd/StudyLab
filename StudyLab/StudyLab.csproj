@@ -226,6 +226,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\QuestionController.cs" />
+    <Compile Include="Controllers\API\TypeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JavaScriptController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -277,6 +278,7 @@
     <Compile Include="Models\Dtos\QuestionCreateDto.cs" />
     <Compile Include="Models\Dtos\QuestionDto.cs" />
     <Compile Include="Models\Dtos\QuestionUpdateDto.cs" />
+    <Compile Include="Models\Dtos\TypeDto.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Question.cs" />

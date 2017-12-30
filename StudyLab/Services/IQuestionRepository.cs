@@ -12,5 +12,6 @@ namespace StudyLab.Services
         bool Save();
         void AddQuestion(List<Question> dto);
         void UpdateQuestion(int id, string tId, JsonPatchDocument<Question> dto);
+        IEnumerable<Type> GetTypes();
     }
 }

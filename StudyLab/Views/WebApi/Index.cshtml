@@ -6,14 +6,16 @@
 
 <button class="btn btn-primary addQuestion" type="button">Add a Question</button>
 
-<div id="page_name" class="btn btn-primary pageName">WebAPI</div>
+<div id="page_name" class="btn-primary pageName">WebAPI</div>
 
 
 
 <div class="jumbotron jumbotron-questions">
     <div class="light_box">
-
+        
         <div class="jumbotron jumbotron-add">
+            
+            <div class="tester"></div>
             <div class="close add_close close_button" aria-label="Close">&times;</div>
 
 
@@ -24,11 +26,7 @@
                 </div>
                 <div class="form-group">
                     <label for="type">Category</label>
-                    <select class="form-control center-block" id="type">
-                        <option>TEST</option>
-                        <option>TEST</option>
-                        <option>TEST</option>
-                        <option>TEST</option>
+                    <select class="type form-control center-block">
                     </select>
                 </div>
                 <div class="form-group">
@@ -36,10 +34,8 @@
                     <textarea class="form-control center-block" rows="5" id="answerText_input"></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id="submit_form" type="submit" class="btn btn-primary">Submit</button>
             </form>
-
-
         </div>
     </div>
     <div class="parent">
@@ -52,19 +48,31 @@
 @section scripts {
     @Scripts.Render("~/bundles/questions")
 
+
     <script>
 
         $(document).ready(function () {
-            $(".addQuestion").on("click",
-                function (e) {
-                    e.preventDefault();
-                    $(".light_box").fadeToggle();
-                });
-            $(".close_button").on("click",
-                function () {
-                    $(".light_box").fadeToggle();
-                });
+            $.ajax({
+                url: "api/types",
+                method: "GET",
+                dataType: "json",
+                success: function(data) {
+                    $.each(data,
+                        function(index, element) {
+                            $(".type").append("<option value=" + element.Id + ">" + element.Name + "</option>");
+                        });
+                },
+                error: function(request) {
+
+                }
+            });
+            $(".type").change(function(){
+                var id = $(this).val();
+                console.log(id);
+            }); 
         });
 
+        
     </script>
+
 }
