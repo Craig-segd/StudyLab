@@ -1,5 +1,17 @@
 ﻿$(document).ready(function () {
 
+    $.ajax({
+        url: "/api/types",
+        method: "GET",
+        dataType: "json",
+        success: function (data) {
+            $.each(data,
+                function (index, element) {
+                    $(".type").append("<option value=" + element.Id + ">" + element.Name + "</option>");
+                });
+        }
+    });
+
     function reload() {
         $.ajax({
             url: "/api/questions/" + $("#page_name").text(),
@@ -15,11 +27,13 @@
                         $(".delete" + index).attr("data-delete-id", element.Id);
                     });
             },
-            error: function (request, error) {
-                alert("Request: " + JSON.stringify(request));
+            error: function () {
+                console.log("Server error: Could not retrieve data");
             }
         });
     }
+
+    
 
     // UPDATE
 

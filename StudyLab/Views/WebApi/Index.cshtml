@@ -5,19 +5,13 @@
 }
 
 <button class="btn btn-primary addQuestion" type="button">Add a Question</button>
-
 <div id="page_name" class="btn-primary pageName">WebAPI</div>
-
-
-
 <div class="jumbotron jumbotron-questions">
     <div class="light_box">
         
         <div class="jumbotron jumbotron-add">
             
-            <div class="tester"></div>
             <div class="close add_close close_button" aria-label="Close">&times;</div>
-
 
             <form>
                 <div class="form-group">
@@ -43,36 +37,7 @@
 
 </div>
 
-
-
 @section scripts {
     @Scripts.Render("~/bundles/questions")
-
-
-    <script>
-
-        $(document).ready(function () {
-            $.ajax({
-                url: "api/types",
-                method: "GET",
-                dataType: "json",
-                success: function(data) {
-                    $.each(data,
-                        function(index, element) {
-                            $(".type").append("<option value=" + element.Id + ">" + element.Name + "</option>");
-                        });
-                },
-                error: function(request) {
-
-                }
-            });
-            $(".type").change(function(){
-                var id = $(this).val();
-                console.log(id);
-            }); 
-        });
-
-        
-    </script>
 
 }
