@@ -190,4 +190,3 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.c
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.csproj.CoreCompileInputs.cache
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.pdb
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.csprojResolveAssemblyReference.cache
