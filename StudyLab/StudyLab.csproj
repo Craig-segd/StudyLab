@@ -19,7 +19,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44323</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -252,10 +252,6 @@
     <Compile Include="Migrations\201712222115160_PopulateTypes.Designer.cs">
       <DependentUpon>201712222115160_PopulateTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712222139095_AddAdmin.cs" />
-    <Compile Include="Migrations\201712222139095_AddAdmin.Designer.cs">
-      <DependentUpon>201712222139095_AddAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201712240242136_RefactoredWholeDb.cs" />
     <Compile Include="Migrations\201712240242136_RefactoredWholeDb.Designer.cs">
       <DependentUpon>201712240242136_RefactoredWholeDb.cs</DependentUpon>
@@ -394,9 +390,6 @@
     <EmbeddedResource Include="Migrations\201712222115160_PopulateTypes.resx">
       <DependentUpon>201712222115160_PopulateTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712222139095_AddAdmin.resx">
-      <DependentUpon>201712222139095_AddAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712240242136_RefactoredWholeDb.resx">
       <DependentUpon>201712240242136_RefactoredWholeDb.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,7 +421,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56946</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:5555/</IISUrl>
+          <IISUrl>https://localhost:44343/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

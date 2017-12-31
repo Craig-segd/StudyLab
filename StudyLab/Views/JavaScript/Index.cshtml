@@ -4,12 +4,29 @@
     ViewBag.Title = "JavaScript";
 }
 
-<button class="btn btn-primary addQuestion" type="button">Add a Question</button>
+@{
+    var isAdmin = User.IsInRole("Administrator").ToString();
+}
+
+@if (User.IsInRole("Administrator"))
+{
+    <button class="btn btn-primary addQuestion" type="button">Add a Question</button>
+}
+else
+{
+    <button class="btn btn-primary addQuestion" style="visibility: hidden" type="button">Add a Question</button>
+}
+
 <div id="page_name" class="btn-primary pageName">JavaScript</div>
 <div class="jumbotron jumbotron-questions">
-    @Html.Partial("_Add")
-    <div class="parent">
+    @if (User.IsInRole("Administrator"))
+    {
+        @Html.Partial("_Add")
+    }
+    <div id="@isAdmin" class="parent">
+
     </div>
+
 
 </div>
 

@@ -1,9 +1,10 @@
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using StudyLab.Models;
+
 namespace StudyLab.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<StudyLab.Models.ApplicationDbContext>
     {
@@ -14,18 +15,19 @@ namespace StudyLab.Migrations
 
         protected override void Seed(StudyLab.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            var user = new ApplicationUser { Email = "admin@studylab.com", UserName = "admin@studylab.com" };
+            userManager.Create(user, "123456");
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            // CREATE NEW ROLE (ADMINISTRATOR)
+            var rm = new RoleManager<IdentityRole>(
+                new RoleStore<IdentityRole>(new ApplicationDbContext()));
+            rm.Create(new IdentityRole("Administrator"));
+
+            // ADD ADMIN ACCOUNT TO ROLE
+            var email = userManager.FindByEmail("admin@studylab.com");
+            userManager.AddToRole(email.Id, "Administrator");
+
         }
     }
 }

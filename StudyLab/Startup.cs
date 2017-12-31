@@ -1,10 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.Owin;
 using Owin;
 using StudyLab.Models;
 using StudyLab.Models.Dtos;
 
-[assembly: OwinStartupAttribute(typeof(StudyLab.Startup))]
 namespace StudyLab
 {
     public partial class Startup
@@ -12,6 +10,7 @@ namespace StudyLab
 
         public void Configuration(IAppBuilder app)
         {
+
             // Initialise AutoMapper
             Mapper.Initialize(cfg =>
             {
@@ -20,6 +19,7 @@ namespace StudyLab
                 cfg.CreateMap<Question, QuestionCreateDto>();
                 cfg.CreateMap<QuestionCreateDto, Question>();
             });
+
             ConfigureAuth(app);
 
         }

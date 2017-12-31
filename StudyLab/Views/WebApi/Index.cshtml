@@ -4,10 +4,21 @@
     ViewBag.Title = "WebAPI";
 }
 
-<button class="btn btn-primary addQuestion" type="button">Add a Question</button>
+@if (User.IsInRole("Administrator"))
+{
+    <button class="btn btn-primary addQuestion" type="button">Add a Question</button>
+}
+else
+{
+    <button class="btn btn-primary addQuestion" style="visibility: hidden" type="button">Add a Question</button>
+}
+
 <div id="page_name" class="btn-primary pageName">WebAPI</div>
 <div class="jumbotron jumbotron-questions">
-    @Html.Partial("_Add")
+    @if (User.IsInRole("Administrator"))
+    {
+        @Html.Partial("_Add")
+    }
     <div class="parent">
     </div>
 
