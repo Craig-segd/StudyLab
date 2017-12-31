@@ -6,7 +6,6 @@ using StudyLab.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace StudyLab.Controllers.API
 {
@@ -21,7 +20,7 @@ namespace StudyLab.Controllers.API
 
         [System.Web.Http.HttpGet] // Specifies the HTTP method
         [System.Web.Http.Route("api/questions/{tId}")] // Specifies the route URI using attribute routing
-        [ValidateAntiForgeryToken]
+
         public IHttpActionResult GetAllQuestions([FromUri]string tId)
         {
             var questions = _repository.GetQuestions(tId); // Get a list of all the questions with the TypeId
@@ -36,7 +35,6 @@ namespace StudyLab.Controllers.API
 
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/questions/{tId}/{id}", Name = "GetQuestion")]
-        [ValidateAntiForgeryToken]
         public IHttpActionResult GetQuestion([FromUri]int id, string tId)
         {
 
@@ -52,7 +50,7 @@ namespace StudyLab.Controllers.API
 
         [System.Web.Http.HttpDelete]
         [System.Web.Http.Route("api/questions/{tId}/{id}")]
-        [ValidateAntiForgeryToken]
+
         public IHttpActionResult DeleteQuestion([FromUri]int id, string tId)
         {
             if (id == 0)
@@ -72,7 +70,6 @@ namespace StudyLab.Controllers.API
 
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/questions")]
-        [ValidateAntiForgeryToken]
         public IHttpActionResult AddQuestion([FromBody]IEnumerable<QuestionCreateDto> dto)
         {
 
@@ -103,7 +100,6 @@ namespace StudyLab.Controllers.API
 
         [System.Web.Http.HttpPatch]
         [System.Web.Http.Route("api/questions/{tId}/{id}")]
-        [ValidateAntiForgeryToken]
         public IHttpActionResult UpdateQuestion(int id, string tId, [FromBody]JsonPatchDocument<QuestionUpdateDto> dto)
         {
             if (!ModelState.IsValid) // Check if the dto model state is valid

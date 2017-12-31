@@ -4,7 +4,6 @@ using StudyLab.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace StudyLab.Controllers.API
 {
@@ -18,7 +17,6 @@ namespace StudyLab.Controllers.API
         }
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/types")]
-        [ValidateAntiForgeryToken]
         public IHttpActionResult GetTypes()
         {
             var list = _repository.GetTypes();
