@@ -4,6 +4,10 @@
     ViewBag.Title = "MVC";
 }
 
+@{
+    var isAdmin = User.IsInRole("Administrator").ToString();
+}
+
 @if (User.IsInRole("Administrator"))
 {
     <button class="btn btn-primary addQuestion" type="button">Add a Question</button>
@@ -19,7 +23,7 @@ else
     {
         @Html.Partial("_Add")
     }
-    <div class="parent">
+    <div id="@isAdmin" class="parent">
     </div>
 
 </div>
