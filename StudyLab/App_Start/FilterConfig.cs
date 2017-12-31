@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using RequireHttpsAttribute = StudyLab.Services.RequireHttpsAttribute;
 
 namespace StudyLab
 {
