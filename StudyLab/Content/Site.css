@@ -19,6 +19,10 @@ a {
     padding-right: 15px;
 }
 
+label {
+    font-weight: normal;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -197,7 +201,24 @@ textarea {
     margin-top: 14px;
 }
 
-    /*********Add a Question*******/
+.jumbotron-settings {
+    margin-top: 50px;
+    padding-top: 30px;
+    
+}
+
+.jumbotron-register {
+    margin-top: 50px;
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron-settings {
+        text-align: center;
+    }
+}
 
 .addQuestion:hover {
     box-shadow: inset 0 -2px 0 #eae7e3 !important;
@@ -272,6 +293,16 @@ textarea {
     border-radius: 10px 10px 0 0;
 }
 
+.pageSettings {
+    float: left !important;
+    font-size: 22px;
+}
+
+.pageRegister {
+    float: left !important;
+    font-size: 26px;
+}
+
 .light_box {
     position: fixed;
     background-color: #ddccaa;
@@ -314,7 +345,7 @@ textarea {
     .jumbotron-add {
         left: 10%;
         width: 80%;
-        padding-top: 80px;
+        padding-top: 50px;
     }
 }
 
@@ -322,7 +353,7 @@ textarea {
     .jumbotron-add {
         left: 33%;
         width: 30%;
-        padding-top: 70px;
+        padding-top: 50px;
     }
 }
 
@@ -335,4 +366,59 @@ textarea {
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.centerRegister {
+    display: inline-block;
+    display: table;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .centerRegister {
+        width: 90% !important;
+    }
+}
+
+.jumbotron-login {
+    margin-top: 50px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.pageLogin {
+    float: left;
+}
+
+.centerLogin {
+    display: inline-block;
+    display: table;
+    margin: auto;
+}
+
+#socialLoginForm {
+    margin-top: -30px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron-login {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron-register {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        padding-bottom: 30px;
+    }
 }

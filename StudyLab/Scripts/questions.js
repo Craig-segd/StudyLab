@@ -1,5 +1,7 @@
 ﻿$(document).ready(function () {
 
+    // GET ALL TYPES
+
     $.ajax({
         url: "/api/types",
         method: "GET",
@@ -32,6 +34,31 @@
             }
         });
     }
+
+    // ADD QUESTION (POST)
+
+    $("#submit_form").on("click",
+        function (data) {
+
+            $.ajax({
+                url: "/api/questions",
+                method: "POST",
+                contentType: "application/json",
+                data: JSON.stringify([
+                    {
+                        "QuestionText": $("#questionText_input").val(),
+                        "AnswerText": $("#answerText_input").val(),
+                        "TypeId": $(".type").val()
+                    }]),
+                success: function () {
+                    $(".light_box").fadeToggle();
+                },
+                error: function () {
+                    data.preventDefault();
+                    console.log("Error");
+                }
+            });
+        });
 
     
 
@@ -80,33 +107,7 @@
 
         });
 
-    // ADD QUESTION (POST)
-
-    $("#submit_form").on("click",
-        function (data) {
-
-            $.ajax({
-                url: "/api/questions",
-                method: "POST",
-                contentType: "application/json",
-                data: JSON.stringify([
-                    {
-                        "QuestionText": $("#questionText_input").val(),
-                        "AnswerText": $("#answerText_input").val(),
-                        "TypeId": $(".type").val()
-                    }]),
-                success: function () {
-                    $(".light_box").fadeToggle();
-                },
-                error: function () {
-                    data.preventDefault();
-                    console.log("Error");
-                }
-            });
-             // prevent page refresh
-            //$(".light_box").fadeToggle();
-            //console.log("Sent");
-        });
+    
 
     // HIDE/SHOW ANSWERS
 

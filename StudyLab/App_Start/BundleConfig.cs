@@ -31,6 +31,7 @@ namespace StudyLab
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-united.css",
                       "~/Content/toastr.css",
+                      "~/Content/bootstrap-social.css",
                       "~/Content/site.css"));
         }
     }
