@@ -28,6 +28,10 @@ namespace StudyLab
                 "~/Scripts/questions.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/bundles/avatar").Include(
+                "~/Scripts/avatar.js"
+            ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-united.css",
                       "~/Content/toastr.css",
