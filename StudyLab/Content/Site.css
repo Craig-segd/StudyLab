@@ -425,10 +425,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .avatar {
     background-image: none;
+    border: 1px solid grey;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 35px;
     height: 35px;
+    border-radius:100%;
     width: 35px !important;
     /*border: 1px solid red;*/
     display: inline-block;
@@ -437,10 +439,35 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-left: 10px;
 }
 
-@media screen and (max-width: 768px) {
+.bigImage {
+    border: none;
+    background-color: transparent;
+    height: 120px !important;
+    width: 120px !important;
+    -ms-background-size: 100px !important;
+    background-size: 100px !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    border-radius: 0%;
+}
 
-    .avatar {
-        display: none;
-    }
+.bigAvatar {
+    border: 1px solid grey;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
 
+}
+
+.uploadbtn {
+    width: 142px;
+}
+
+.btn-file {
+    margin-top: 5px;
 }

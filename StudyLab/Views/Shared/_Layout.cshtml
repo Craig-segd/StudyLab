@@ -1,4 +1,5 @@
-﻿@using StudyLab.Models
+﻿@using Microsoft.AspNet.Identity
+@using StudyLab.Models
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 </head>
 <body>
    @Html.Partial("_NavBar")
-    <div class="container body-content">
+    <div id="@User.Identity.GetUserId()" class="container body-content email">
         @RenderBody()
         <hr />
         <footer>

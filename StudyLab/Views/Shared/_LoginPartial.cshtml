@@ -11,7 +11,7 @@
             
 
             <li class="dropdown">
-                <a href="#" id="@User.Identity.GetUserName()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<div class="avatar"></div></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<div class="avatar"></div></a>
                 @*<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<span class="caret"></span></a>*@
                 <ul class="dropdown-menu">
                     <li>@Html.ActionLink("Account Settings", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Account Settings"})</li>

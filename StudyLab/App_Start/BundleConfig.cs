@@ -21,6 +21,7 @@ namespace StudyLab
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/bootbox.js",
+                      "~/Scripts/jasny-bootstrap.js",
                       "~/Scripts/toastr.js",
                       "~/Scripts/respond.js"));
 
@@ -36,6 +37,7 @@ namespace StudyLab
                       "~/Content/bootstrap-united.css",
                       "~/Content/toastr.css",
                       "~/Content/bootstrap-social.css",
+                      "~/Content/jasny-bootstrap.css",
                       "~/Content/site.css"));
         }
     }

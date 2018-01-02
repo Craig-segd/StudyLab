@@ -1,4 +1,5 @@
-﻿@model StudyLab.Models.IndexViewModel
+﻿@using Microsoft.AspNet.Identity
+@model StudyLab.Models.IndexViewModel
 @{
     ViewBag.Title = "Manage";
 }
@@ -84,44 +85,23 @@
             <dt>
                 Profile Avatar:
             </dt>
-            <dd><input name="myFile" class="upload" type="file"/></dd>
             <dd>
-                <button class="btn btn-primary btn-sm uploadbtn" style="margin-top: 10px;">Upload</button>
+                
+                <div class="btn btn-default btn-sm btn-file">
+                    <div class="bigAvatar">
+                        <div class="avatar bigImage"></div>
+                    </div>  
+                    <input name="myFile" class="upload" type="file"/>
+                </div>
+
+</dd>
+            <dd>
+                
+                <button class="btn btn-primary uploadbtn" style="margin-top: 10px;">Upload</button>
+
             </dd>
         </dl>
+
     </div>
 </div>
 
-@section scripts {
-    <script>
-        $(".uploadbtn").on("click",
-            function () {
-
-                var data = new FormData();
-                var files = $(".upload").get(0).files;
-
-                if (files.length > 0) {
-                    data.append("UploadedImage", files[0]);
-                }
-
-                $.ajax({
-                    url: "/api/upload",
-                    method: "POST",
-                    data: data,
-                    contentType: false,
-                    processData: false,
-                    cache: false,
-                    success: function () {
-                        console.log("Success");
-                        Avatar();
-                    },
-                    error: function () {
-                        console.log("Error");
-                    }
-                });
-            });
-
-       
-
-    </script>
-}
