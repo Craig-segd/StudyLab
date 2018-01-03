@@ -48,9 +48,9 @@ namespace StudyLab.Models
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Enter a valid email address")]
         [Display(Name = "Email")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Enter a valid email address")]
         public string Email { get; set; }
 
         [Required]
@@ -64,8 +64,8 @@ namespace StudyLab.Models
 
     public class RegisterViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "The Email field is required.")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email.")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
@@ -77,7 +77,7 @@ namespace StudyLab.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "The passwords do not match.")]
         public string ConfirmPassword { get; set; }
 
         public byte[] Avatar { get; set; }

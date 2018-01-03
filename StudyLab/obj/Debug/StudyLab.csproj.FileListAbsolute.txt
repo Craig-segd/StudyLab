@@ -152,6 +152,9 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Autofac.Integrat
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\AutoMapper.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\EntityFramework.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\EntityFramework.SqlServer.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Glimpse.AspNet.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Glimpse.Core.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Glimpse.Mvc5.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Microsoft.AI.Agent.Intercept.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Microsoft.AI.DependencyCollector.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\Microsoft.AI.PerfCounterCollector.dll

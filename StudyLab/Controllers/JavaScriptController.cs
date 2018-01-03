@@ -2,6 +2,7 @@
 
 namespace StudyLab.Controllers
 {
+    [Authorize]
     public class JavaScriptController : Controller
     {
         // GET: JavaScript

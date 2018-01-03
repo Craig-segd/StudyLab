@@ -14,6 +14,8 @@
         }
     });
 
+    // RE-POPULATE QUESTION DATA
+
     function reload() {
         $.ajax({
             url: "/api/questions/" + $("#page_name").text(),
@@ -58,12 +60,16 @@
                     console.log("Error");
                 }
             });
-        });  
+        });
+
+    // SUCCESS LOGIN ALERT
+    
 
     // UPDATE
 
     reload();
     setInterval(reload, 8000);
+
 
     // DELETE
 
@@ -105,7 +111,7 @@
 
         });
 
-    
+
 
     // HIDE/SHOW ANSWERS
 
@@ -145,7 +151,7 @@
                         "' class='panel-body answer'></div></div>");
                 }
 
-                
+
             }
         }
     }
