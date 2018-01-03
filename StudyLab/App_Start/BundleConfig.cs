@@ -30,7 +30,8 @@ namespace StudyLab
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/avatar").Include(
-                "~/Scripts/avatar.js"
+                "~/Scripts/avatar.js",
+                "~/Scripts/jquery.unobtrusive-ajax.js"
             ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

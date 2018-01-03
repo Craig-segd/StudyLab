@@ -13,13 +13,58 @@
         <div class="row">
             <div class="col-md-12">
                 <section id="loginForm">
-                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    
+                    @*@using (Ajax.BeginForm("Login", "Account", new AjaxOptions() { OnSuccess = "onSuccess"}, new { @class="form-horizontal"}))
                     {
-                        @*@Html.AntiForgeryToken()*@                 
+                        <fieldset>
+                            
+                            <hr/>
+                            @Html.ValidationSummary(true, "", new {@class = "alert alert-danger"})
+
+                            <div class="alert alert-success loginSuccess">Login Successful</div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email, new {@class = "control-label"})
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(m => m.Email, new {@class = "form-control center-block"})
+                                    @Html.ValidationMessageFor(m => m.Email, "", new {@class = "text-danger"})
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password, new {@class = "control-label"})
+                                <div class="col-md-12">
+                                    @Html.PasswordFor(m => m.Password, new {@class = "form-control center-block"})
+                                    @Html.ValidationMessageFor(m => m.Password, "", new {@class = "text-danger"})
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <div class="checkbox">
+                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                    @Html.LabelFor(m => m.RememberMe)
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="submit" value="Log in" class="btn btn-primary btn-block login_button"/>
+                                </div>
+
+                            </div>
+                            <div id="socialLoginForm">
+                                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel {ReturnUrl = ViewBag.ReturnUrl})
+                            </div>
+
+
+                            @Html.ActionLink("Register as a new user", "Register")
+                        </fieldset>
+                    }*@
+
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {                                     
                         
                         <hr />
-                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
-                        @*<div class='alert alert-success loginSuccess'>Login Successful</div>*@
+                        @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })                       
 
                         <div class="form-group">
                             @Html.LabelFor(m => m.Email, new { @class = "control-label" })
@@ -55,13 +100,9 @@
 
                         
                             @Html.ActionLink("Register as a new user", "Register")
-                        
-                        @* Enable this once you have account confirmation enabled for password reset functionality
-                            <p>
-                                @Html.ActionLink("Forgot your password?", "ForgotPassword")
-                            </p>*@
+                    
                     }
-                        
+
 
                 </section>
                 
@@ -71,11 +112,9 @@
         </div>
     </div>
 </div>
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
 
-        <script>
+ @section Scripts {
+     @Scripts.Render("~/bundles/jqueryval")
+     
 
-
-        </script>
-    }
+ }
