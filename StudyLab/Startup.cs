@@ -18,6 +18,8 @@ namespace StudyLab
                 cfg.CreateMap<QuestionDto, Question>();
                 cfg.CreateMap<Question, QuestionCreateDto>();
                 cfg.CreateMap<QuestionCreateDto, Question>();
+                cfg.CreateMap<Message, MessageDto>();
+                cfg.CreateMap<MessageDto, Message>();
             });
 
             ConfigureAuth(app);

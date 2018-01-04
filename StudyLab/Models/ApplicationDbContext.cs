@@ -7,6 +7,7 @@ namespace StudyLab.Models
     {
         public DbSet<Question> Questions { get; set; }
         public DbSet<Type> Type { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

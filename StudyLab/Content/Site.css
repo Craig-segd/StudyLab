@@ -269,6 +269,11 @@ textarea {
     border: none;
 }
 
+.btn-default {
+    outline: none;
+    border: none;
+}
+
 .btn:focus {
     outline: none;
     border: none;
@@ -289,13 +294,14 @@ textarea {
     font-size: 25px;
     font-family: "Lato";
     text-align: center;
-    padding-top: 5px;
+    padding-top: 7px;
     border-radius: 10px 10px 0 0;
 }
 
 .pageSettings {
     float: left !important;
     font-size: 22px;
+
 }
 
 .pageRegister {
@@ -467,6 +473,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .uploadbtn {
     width: 142px;
+    border: none;
+    outline: none;
 }
 
 .btn-file {
@@ -475,4 +483,86 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .loginSuccess {
     display: none;
+}
+
+/************MESSAGING************/
+
+.messageBtn {
+    margin-top: 5px;
+    height: 40px;
+    margin-right: 5px;
+    background-color: #ecba6e;
+    border: none;
+    outline: none;
+}
+
+.message_container {
+    border: 1px solid #e29828;
+    padding: 10px;
+    background-color: #ecba6e;
+    width: 320px;
+    position: absolute;
+    display: none;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 70vh;
+}
+
+@media screen and (max-width: 768px) {
+    .message_container {
+        margin-top: 30vh;
+    }
+}
+
+
+.btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus {
+    color: #ffffff;
+    background-color: #f2c279;
+    border: none;
+    outline: none;
+}
+
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background-color: #f2c279;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.messageTitle {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: white;
+    border-bottom: 1px solid #fff;
+}
+
+.message {
+    font-size: 12px;
+    text-align: justify;
+    max-height: 50px;
+    overflow:hidden;
+    margin-bottom: 10px;
+
+}
+
+.messageCon {
+    margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    .container { width: 840px; }
+}
+
+/************SEND MESSAGE************/
+
+.sendMessage_container {
+    background-color: #ecba6e;
+    width: 300px;
+    height: 380px;
+    position: absolute;
+    display: none;
+    padding: 15px;
+    border-radius: 5px;
 }

@@ -29,6 +29,10 @@ namespace StudyLab
                 "~/Scripts/questions.js"
                 ));
 
+            bundles.Add(new ScriptBundle("~/bundles/messages").Include(
+                "~/Scripts/messages.js"
+            ));
+
             bundles.Add(new ScriptBundle("~/bundles/avatar").Include(
                 "~/Scripts/avatar.js",
                 "~/Scripts/jquery.unobtrusive-ajax.js"

@@ -4,22 +4,58 @@
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
     {
-    @Html.AntiForgeryToken()
-        
-        <ul  class="nav navbar-nav navbar-right">
-            
-            
+        @Html.AntiForgeryToken()
+
+        <ul class="nav navbar-nav navbar-right">
+
+
 
             <li id="@User.Identity.GetUserId()" class="dropdown email">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<div class="avatar"></div></a>
+
+
+
                 @*<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<span class="caret"></span></a>*@
                 <ul class="dropdown-menu">
-                    <li>@Html.ActionLink("Account Settings", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Account Settings"})</li>
+                    <li>@Html.ActionLink("Account Settings", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Account Settings" })</li>
                     <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                 </ul>
             </li>
-
         </ul>
+
+
+        <button class="btn btn-primary messageBtn" type="button">
+            Messages <span class="badge"></span>
+        </button>
+
+        <div id="@User.Identity.GetUserId()" class="message_container">
+            
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default send">Send a message</button>
+                
+            </div>
+            <div class="sendMessage_container">
+                
+                <form>
+                    <div class="form-group">
+                        <label for="senderText_input">To:</label>
+                        <input type="text" class="form-control center-block" id="senderText_input">
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectText_input">Subject:</label>
+                        <input type="text" class="form-control center-block" id="subjectText_input">
+                    </div>
+                    <div class="form-group">
+                        <label for="messageText_input">Message:</label>
+                        <textarea class="form-control center-block" rows="5" id="messageText_input"></textarea>
+                    </div>
+
+                    <button id="submit_form" type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            </div>
+            <div class="center-block messageTitle">Private Messages</div>
+        </div>
 
     }
 }
@@ -29,5 +65,9 @@ else
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary navbar-btn nav-login" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary navbar-btn nav-login" })</li>
     </ul>
+}
+
+@section scripts {
+    
 }
 

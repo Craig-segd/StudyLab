@@ -235,6 +235,7 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\API\MessageController.cs" />
     <Compile Include="Controllers\API\QuestionController.cs" />
     <Compile Include="Controllers\API\TypeController.cs" />
     <Compile Include="Controllers\API\UploadController.cs" />
@@ -268,10 +269,6 @@
     <Compile Include="Migrations\201712240242136_RefactoredWholeDb.Designer.cs">
       <DependentUpon>201712240242136_RefactoredWholeDb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712240249576_TestQuestions.cs" />
-    <Compile Include="Migrations\201712240249576_TestQuestions.Designer.cs">
-      <DependentUpon>201712240249576_TestQuestions.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201712242054239_AddedServerVal.cs" />
     <Compile Include="Migrations\201712242054239_AddedServerVal.Designer.cs">
       <DependentUpon>201712242054239_AddedServerVal.cs</DependentUpon>
@@ -284,19 +281,27 @@
     <Compile Include="Migrations\201801010002279_AddImageModel.Designer.cs">
       <DependentUpon>201801010002279_AddImageModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801041451439_MessageModel.cs" />
+    <Compile Include="Migrations\201801041451439_MessageModel.Designer.cs">
+      <DependentUpon>201801041451439_MessageModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Dtos\MessageDto.cs" />
     <Compile Include="Models\Dtos\QuestionCreateDto.cs" />
     <Compile Include="Models\Dtos\QuestionDto.cs" />
     <Compile Include="Models\Dtos\QuestionUpdateDto.cs" />
     <Compile Include="Models\Dtos\TypeDto.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IMessageRepository.cs" />
     <Compile Include="Services\IQuestionRepository.cs" />
+    <Compile Include="Services\MessageRepository.cs" />
     <Compile Include="Services\QuestionRepository.cs" />
     <Compile Include="Services\RequireHttpsAttribute.cs" />
     <Compile Include="Startup.cs" />
@@ -352,7 +357,12 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\messages.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\questions.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -421,9 +431,6 @@
     <EmbeddedResource Include="Migrations\201712240242136_RefactoredWholeDb.resx">
       <DependentUpon>201712240242136_RefactoredWholeDb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712240249576_TestQuestions.resx">
-      <DependentUpon>201712240249576_TestQuestions.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712242054239_AddedServerVal.resx">
       <DependentUpon>201712242054239_AddedServerVal.cs</DependentUpon>
     </EmbeddedResource>
@@ -432,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801010002279_AddImageModel.resx">
       <DependentUpon>201801010002279_AddImageModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801041451439_MessageModel.resx">
+      <DependentUpon>201801041451439_MessageModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

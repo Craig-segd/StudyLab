@@ -14,6 +14,8 @@
         }
     });
 
+    
+
     // RE-POPULATE QUESTION DATA
 
     function reload() {
@@ -35,6 +37,41 @@
                 console.log("Server error: Could not retrieve data");
             }
         });
+    }
+
+    function render(a, b) {
+        if (parseInt(a) !== parseInt(b)) {
+
+            for (var i = b; i < a; i++) {
+
+                if ($(".parent").attr("id") === "True") {
+
+                    $(".parent").append("<div class='panel panel-default'>" +
+                        "<button id ='" +
+                        i +
+                        "' type='button' class='close delete" +
+                        i +
+                        " delete-me' aria-label='Close' data-delete-id =''>" +
+                        "<span aria-hidden='true'>&times;</span></button>" +
+                        "<div id='question" +
+                        i +
+                        "' class='panel-heading question'></div>" +
+                        "<div id='answer" +
+                        i +
+                        "' class='panel-body answer'></div></div>");
+                } else {
+                    $(".parent").append("<div class='panel panel-default'>" +
+                        "<div id='question" +
+                        i +
+                        "' class='panel-heading question'></div>" +
+                        "<div id='answer" +
+                        i +
+                        "' class='panel-body answer'></div></div>");
+                }
+
+
+            }
+        }
     }
 
     // ADD QUESTION (POST)
@@ -121,40 +158,7 @@
             $(this).next().toggle(100);
         });
 
-    function render(a, b) {
-        if (parseInt(a) !== parseInt(b)) {
-
-            for (var i = b; i < a; i++) {
-
-                if ($(".parent").attr("id") === "True") {
-
-                    $(".parent").append("<div class='panel panel-default'>" +
-                        "<button id ='" +
-                        i +
-                        "' type='button' class='close delete" +
-                        i +
-                        " delete-me' aria-label='Close' data-delete-id =''>" +
-                        "<span aria-hidden='true'>&times;</span></button>" +
-                        "<div id='question" +
-                        i +
-                        "' class='panel-heading question'></div>" +
-                        "<div id='answer" +
-                        i +
-                        "' class='panel-body answer'></div></div>");
-                } else {
-                    $(".parent").append("<div class='panel panel-default'>" +
-                        "<div id='question" +
-                        i +
-                        "' class='panel-heading question'></div>" +
-                        "<div id='answer" +
-                        i +
-                        "' class='panel-body answer'></div></div>");
-                }
-
-
-            }
-        }
-    }
+    
 
 
 });

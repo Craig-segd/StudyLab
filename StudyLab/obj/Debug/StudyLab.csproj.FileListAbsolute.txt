@@ -27,7 +27,6 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Di
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Diagnostics.Process.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Diagnostics.StackTrace.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.Primitives.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.Pipes.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Reflection.Metadata.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.AccessControl.dll
@@ -236,7 +235,6 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.M
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.AddedQuestionsAnswers.resources
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.PopulateTypes.resources
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.RefactoredWholeDb.resources
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.TestQuestions.resources
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.AddedServerVal.resources
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.Questions.resources
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.AddImageModel.resources
@@ -244,5 +242,7 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.c
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.csproj.CoreCompileInputs.cache
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.pdb
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.MessageModel.resources
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.Primitives.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Collections.Immutable.dll

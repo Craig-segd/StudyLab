@@ -31,6 +31,8 @@ namespace StudyLab
 
             builder.RegisterType<QuestionRepository>()
                 .As<IQuestionRepository>();
+            builder.RegisterType<MessageRepository>()
+                .As<IMessageRepository>();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
