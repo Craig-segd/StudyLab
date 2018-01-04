@@ -13,6 +13,13 @@ a {
     letter-spacing: 0.2px;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -49,7 +56,7 @@ textarea {
     background-color: #e29828;
 }
 
-/*********NAVBAR********/
+/******************************   NAVBAR   ****************************/
 
 .navbar-default {
     background-color: #e29828;
@@ -154,7 +161,7 @@ textarea {
     }
 }
 
-/*********BUTTON*********/
+/********************************* BUTTON ******************************/
 
 .btn-primary {
     color: #ffffff;
@@ -185,6 +192,50 @@ textarea {
         background-color: #f2c279;
         border-color: #f2c279;
     }
+
+.btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus {
+    color: #ffffff;
+    background-color: #f2c279;
+    border: none;
+    outline: none;
+}
+
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: #ffffff;
+    background-color: #f2c279;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.modal-footer .btn + .btn {
+    outline: none;
+}
+
+.btn-default:focus {
+    outline: none;
+    border: none;
+}
+
+.btn-default {
+    outline: none;
+    border: none;
+}
+
+.btn:focus {
+    outline: none;
+    border: none;
+}
+
+.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+    color: #ffffff;
+    background-color: #867c71;
+    border-color: #6f675e;
+    outline: none;
+    border: none;
+}
+
+/******************************* Jumbotron ******************************/
 
 .jumbotron {
     margin-top: 0px;
@@ -217,6 +268,48 @@ textarea {
 @media screen and (max-width: 768px) {
     .jumbotron-settings {
         text-align: center;
+    }
+}
+
+.jumbotron-add {
+    -webkit-box-shadow: 4px 3px 23px -5px rgba(0,0,0,0.58);
+    -moz-box-shadow: 4px 3px 23px -5px rgba(0,0,0,0.58);
+    box-shadow: 4px 3px 23px -5px rgba(0,0,0,0.58);
+    top: 14%;
+    position: fixed;
+    height: auto;
+    padding-right: 40px !important;
+    padding-left: 40px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron-add {
+        left: 10%;
+        width: 80%;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .jumbotron-add {
+        left: 33%;
+        width: 30%;
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron-login {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron-register {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        padding-bottom: 30px;
     }
 }
 
@@ -260,32 +353,7 @@ textarea {
             outline: none;
         }
 
-.modal-footer .btn + .btn {
-    outline: none;
-}
 
-.btn-default:focus {
-    outline: none;
-    border: none;
-}
-
-.btn-default {
-    outline: none;
-    border: none;
-}
-
-.btn:focus {
-    outline: none;
-    border: none;
-}
-
-.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
-    color: #ffffff;
-    background-color: #867c71;
-    border-color: #6f675e;
-    outline: none;
-    border: none;
-}
 
 .pageName {
     width: 190px;
@@ -336,32 +404,7 @@ textarea {
     opacity: 1;
 }
 
-.jumbotron-add {
-    -webkit-box-shadow: 4px 3px 23px -5px rgba(0,0,0,0.58);
-    -moz-box-shadow: 4px 3px 23px -5px rgba(0,0,0,0.58);
-    box-shadow: 4px 3px 23px -5px rgba(0,0,0,0.58);
-    top: 14%;
-    position: fixed;        
-    height: auto;       
-    padding-right: 40px !important;
-    padding-left: 40px !important;
-}
 
-@media screen and (max-width: 768px) {
-    .jumbotron-add {
-        left: 10%;
-        width: 80%;
-        padding-top: 50px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .jumbotron-add {
-        left: 33%;
-        width: 30%;
-        padding-top: 50px;
-    }
-}
 
 .center-block {
     resize: none;
@@ -372,13 +415,6 @@ textarea {
     outline: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    font-weight: 500;
-    line-height: 1.1;
-    color: inherit;
 }
 
 .centerRegister {
@@ -412,21 +448,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 #socialLoginForm {
     margin-top: -30px;
 
-}
-
-@media screen and (max-width: 768px) {
-    .jumbotron-login {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .jumbotron-register {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        padding-bottom: 30px;
-    }
 }
 
 .avatar {
@@ -485,7 +506,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     display: none;
 }
 
-/************MESSAGING************/
+/************************ MESSAGING *************************/
 
 .messageBtn {
     margin-top: 5px;
@@ -514,22 +535,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     }
 }
 
-
-.btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus {
-    color: #ffffff;
-    background-color: #f2c279;
-    border: none;
-    outline: none;
-}
-
-.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    color: #ffffff;
-    background-color: #f2c279;
-    border: none;
-    outline: none;
-    box-shadow: none;
-}
-
 .messageTitle {
     font-size: 20px;
     margin-top: 10px;
@@ -551,11 +556,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 5px;
 }
 
-@media (min-width: 768px) {
-    .container { width: 840px; }
-}
-
-/************SEND MESSAGE************/
+/*********************** SEND MESSAGE *************************/
 
 .sendMessage_container {
     background-color: #ecba6e;

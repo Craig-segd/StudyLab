@@ -1,5 +1,12 @@
 ﻿$(document).ready(function () {
 
+
+    // UPDATE
+
+    reload();
+    setInterval(reload, 8000);
+
+
     // GET ALL TYPES
 
     $.ajax({
@@ -13,8 +20,6 @@
                 });
         }
     });
-
-    
 
     // RE-POPULATE QUESTION DATA
 
@@ -42,7 +47,7 @@
     function render(a, b) {
         if (parseInt(a) !== parseInt(b)) {
 
-            for (var i = b; i < a; i++) {
+            for (var i = 0; i < a; i++) {
 
                 if ($(".parent").attr("id") === "True") {
 
@@ -78,7 +83,7 @@
 
     $("#submit_form").on("click",
         function (data) {
-
+ 
             $.ajax({
                 url: "/api/questions",
                 method: "POST",
@@ -98,14 +103,6 @@
                 }
             });
         });
-
-    // SUCCESS LOGIN ALERT
-    
-
-    // UPDATE
-
-    reload();
-    setInterval(reload, 8000);
 
 
     // DELETE

@@ -7,10 +7,11 @@ $(".body-content").on("click",
     });
 
 GetMessage();
+setInterval(GetMessage, 3000);
 
 $(".messageBtn").on("click",
     function () {
-        $(".message_container").toggle(100);
+        $(".message_container").slideToggle(100);
         GetMessage();
 
     });
