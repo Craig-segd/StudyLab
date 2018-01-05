@@ -243,6 +243,7 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.c
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.pdb
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.MessageModel.resources
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.MessageRequired.resources
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Collections.Immutable.dll

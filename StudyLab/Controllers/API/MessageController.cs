@@ -49,5 +49,18 @@ namespace StudyLab.Controllers.API
 
             return Ok();
         }
+
+        [HttpDelete]
+        [Route("api/messages/{id}")]
+        public IHttpActionResult DeleteMessage(int id)
+        {
+            _repository.DeleteMessage(id);
+
+            if (!_repository.Save())
+            {
+                return BadRequest();
+            }
+            return Ok();
+        }
     }
 }

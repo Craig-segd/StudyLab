@@ -12,6 +12,7 @@ setInterval(GetMessage, 3000);
 $(".messageBtn").on("click",
     function () {
         $(".message_container").slideToggle(100);
+
         GetMessage();
 
     });
@@ -29,6 +30,7 @@ function GetMessage() {
                 function (index, element) {
                     $("#subject" + index).text(element.SubjectText);
                     $("#message" + index).text(element.MessageText);
+                    $(".delete" + index).attr("data-deletemessage-id", element.Id);
                 });
         },
         error: function () {
@@ -43,6 +45,12 @@ function Render(a, b) {
         for (var i = b; i < a; i++) {
 
             $(".message_container").append("<div class='panel panel-default messageCon'>" +
+                "<button id ='" +
+                i +
+                "' type='button' class='close delete" +
+                i +
+                " delete-message' aria-label='Close' data-deletemessage-id =''>" +
+                "<span aria-hidden='true'>&times;</span></button>" +
                 "<div id='subject" +
                 i +
                 "' class='panel-heading subject'></div>" +
@@ -88,6 +96,36 @@ $("body").on("mouseleave",
 //************** SEND A MESSAGE **************//
 
 $(".send").on("click",
-    function() {
+    function () {
         $(".sendMessage_container").slideToggle(100);
+
+    });
+
+//************** DELETE A MESSAGE **************//
+
+
+$("body").on("click",
+    ".delete-message",
+    function () {
+
+        var button = $(this);
+
+        bootbox.confirm("Are you sure you want to delete the message?",
+            function (result) {
+                if (result) {
+                    $.ajax({
+                        url: "/api/messages/" + button.attr("data-deletemessage-id"),
+                        method: "DELETE",
+                        success: function () {
+                            toastr.success("Message deleted.");
+                            button.parent().remove();
+                            GetMessage();
+                        },
+                        error: function () {
+                            toastr.error("Unable to delete message.");
+                        }
+                    });
+                }
+            });
+
     });

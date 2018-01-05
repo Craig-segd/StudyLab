@@ -509,29 +509,38 @@ textarea {
 /************************ MESSAGING *************************/
 
 .messageBtn {
-    margin-top: 5px;
-    height: 40px;
+    margin-top: 4px;
+    height: 43px;
     margin-right: 5px;
     background-color: #ecba6e;
     border: none;
     outline: none;
 }
 
+.messageBtn:hover {
+    outline: none;
+    border: none;
+}
+
 .message_container {
-    border: 1px solid #e29828;
+    border-left: 1px solid #e29828;
+    border-right: 1px solid #e29828;
+    border-bottom: 1px solid #e29828;
     padding: 10px;
-    background-color: #ecba6e;
+    background-color: #f2c279;
     width: 320px;
     position: absolute;
-    display: none;
-    overflow: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
+    display: none;
     max-height: 70vh;
+    margin-left: -1px;
+    margin-top: -2px;
 }
 
 @media screen and (max-width: 768px) {
     .message_container {
-        margin-top: 30vh;
+        margin-top: 20vh;
     }
 }
 
@@ -559,11 +568,31 @@ textarea {
 /*********************** SEND MESSAGE *************************/
 
 .sendMessage_container {
-    background-color: #ecba6e;
-    width: 300px;
+    background-color: #f2c279;
+    width: 280px;
     height: 380px;
-    position: absolute;
+    position: relative;
     display: none;
     padding: 15px;
+    -ms-border-radius: 5px;
     border-radius: 5px;
 }
+
+.delete-message {
+    font-size: 30px;
+    height: 40px;
+    width: 35px;
+    color: red;
+    -ms-opacity: 0.6;
+    opacity: 0.6;
+}
+
+    .delete-message:active {
+        border: none;
+        outline: none;
+    }
+
+    .delete-message:focus {
+        border: none;
+        outline: none;
+    }

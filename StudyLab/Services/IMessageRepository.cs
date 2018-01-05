@@ -8,5 +8,6 @@ namespace StudyLab.Services
         IEnumerable<Message> RecieveMessages(string reciever);
         void SendMessage(Message dto);
         bool Save();
+        void DeleteMessage(int id);
     }
 }

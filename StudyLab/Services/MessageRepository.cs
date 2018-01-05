@@ -36,5 +36,12 @@ namespace StudyLab.Services
             }
             return true;
         }
+
+        public void DeleteMessage(int id)
+        {
+            var result = _context.Messages.Single(c => c.Id == id);
+
+            _context.Messages.Remove(result);
+        }
     }
 }

@@ -13,9 +13,6 @@
             <li id="@User.Identity.GetUserId()" class="dropdown email">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<div class="avatar"></div></a>
 
-
-
-                @*<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<span class="caret"></span></a>*@
                 <ul class="dropdown-menu">
                     <li>@Html.ActionLink("Account Settings", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Account Settings" })</li>
                     <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
@@ -50,7 +47,7 @@
                         <textarea class="form-control center-block" rows="5" id="messageText_input"></textarea>
                     </div>
 
-                    @*<button id="submit_form" type="submit" class="btn btn-primary">Submit</button>*@
+                    <button id="submit_form" type="submit" class="btn btn-primary">Submit</button>
                 </form>
 
             </div>
@@ -68,6 +65,6 @@ else
 }
 
 @section scripts {
-    
+    @Scripts.Render("~/bundles/jqueryval")
 }
 
