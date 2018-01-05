@@ -18,8 +18,8 @@ namespace StudyLab.Controllers.API
             _repository = repository;
         }
 
-        [System.Web.Http.HttpGet] // Specifies the HTTP method
-        [System.Web.Http.Route("api/questions/{tId}")] // Specifies the route URI using attribute routing
+        [HttpGet] // Specifies the HTTP method
+        [Route("api/questions/{tId}")] // Specifies the route URI using attribute routing
 
         public IHttpActionResult GetAllQuestions([FromUri]string tId)
         {
@@ -33,8 +33,8 @@ namespace StudyLab.Controllers.API
             return Ok(results); // If no errors are found anywhere above, return 200 OK status code and return results.
         }
 
-        [System.Web.Http.HttpGet]
-        [System.Web.Http.Route("api/questions/{tId}/{id}", Name = "GetQuestion")]
+        [HttpGet]
+        [Route("api/questions/{tId}/{id}", Name = "GetQuestion")]
         public IHttpActionResult GetQuestion([FromUri]int id, string tId)
         {
 
@@ -48,8 +48,8 @@ namespace StudyLab.Controllers.API
             return Ok(result);
         }
 
-        [System.Web.Http.HttpDelete]
-        [System.Web.Http.Route("api/questions/{tId}/{id}")]
+        [HttpDelete]
+        [Route("api/questions/{tId}/{id}")]
 
         public IHttpActionResult DeleteQuestion([FromUri]int id, string tId)
         {
@@ -68,38 +68,36 @@ namespace StudyLab.Controllers.API
 
         }
 
-        [System.Web.Http.HttpPost]
-        [System.Web.Http.Route("api/questions")]
+        [HttpPost] // Specify HTTP method
+        [Route("api/questions")] //  Specify the route uri
         public IHttpActionResult AddQuestion([FromBody]IEnumerable<QuestionCreateDto> dto)
         {
 
-            if (!ModelState.IsValid)
-                return BadRequest();
+            if (!ModelState.IsValid) // Check if the model state is valid
+                return BadRequest(); // If invalid, return bad request as response
 
-            var temp = new List<Question>();
+            var temp = new List<Question>(); // Temporary list of question objects
 
-            foreach (var question in dto)
+            foreach (var question in dto) // For each loop for interating through each question
             {
-                temp.Add(Mapper.Map<Question>(question)); ;
+                temp.Add(Mapper.Map<Question>(question)); // Map each dto to a Question type
             }
 
-            //var result = Mapper.Map<Question>(dto);
+            if (!temp.Any()) // If no json data has been found
+                return NotFound(); // Return not found
 
-            if (!temp.Any())
-                return NotFound();
-
-            _repository.AddQuestion(temp);
+            _repository.AddQuestion(temp); // Add the temporary list of question objects
 
 
-            if (!_repository.Save())
-                return BadRequest();
+            if (!_repository.Save()) // If saving the modified dbcontext fails
+                return BadRequest(); // Return a bad request
 
             //return CreatedAtRoute("GetQuestion", new { id = result.Id, tId = result.TypeId }, result);
-            return Ok();
+            return Ok(); // Return ok if no other return responses are hit
         }
 
-        [System.Web.Http.HttpPatch]
-        [System.Web.Http.Route("api/questions/{tId}/{id}")]
+        [HttpPatch]
+        [Route("api/questions/{tId}/{id}")]
         public IHttpActionResult UpdateQuestion(int id, string tId, [FromBody]JsonPatchDocument<QuestionUpdateDto> dto)
         {
             if (!ModelState.IsValid) // Check if the dto model state is valid

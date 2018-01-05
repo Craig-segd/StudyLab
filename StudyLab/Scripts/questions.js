@@ -1,12 +1,5 @@
 ﻿$(document).ready(function () {
 
-
-    // UPDATE
-
-    reload();
-    setInterval(reload, 8000);
-
-
     // GET ALL TYPES
 
     $.ajax({
@@ -79,15 +72,32 @@
         }
     }
 
+    reload();
+    setInterval(reload, 8000);
+
     // ADD QUESTION (POST)
 
     $("#submit_form").on("click",
         function (data) {
- 
-            $.ajax({
+            $("form[name='AddaQuestion']").
+                validate({
+                    rules: {
+                        questionText: "required",
+                        answerText: "required"
+                    },
+                    messages: {
+                        questionText: "Question field cannot be left blank",
+                        answerText: "Answer field cannot be left blank"
+
+                    }
+                });
+            if ($("form[name='AddaQuestion']").valid())
+            {
+                $.ajax({
                 url: "/api/questions",
                 method: "POST",
                 contentType: "application/json",
+                dataType: "json",
                 data: JSON.stringify([
                     {
                         "QuestionText": $("#questionText_input").val(),
@@ -102,6 +112,8 @@
                     console.log("Error");
                 }
             });
+            }
+            
         });
 
 

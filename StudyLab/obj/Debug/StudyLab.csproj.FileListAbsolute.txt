@@ -28,12 +28,10 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Di
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Diagnostics.StackTrace.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.Pipes.dll
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Reflection.Metadata.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.AccessControl.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Claims.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Cryptography.Algorithms.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Cryptography.Encoding.dll
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Cryptography.Primitives.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Principal.Windows.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Text.Encoding.CodePages.dll
@@ -243,7 +241,9 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.c
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.pdb
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.MessageModel.resources
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.Primitives.dll
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.Migrations.MessageRequired.resources
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Reflection.Metadata.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Cryptography.Primitives.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Collections.Immutable.dll

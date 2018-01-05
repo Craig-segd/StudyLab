@@ -98,6 +98,7 @@ $("body").on("mouseleave",
 $(".send").on("click",
     function () {
         $(".sendMessage_container").slideToggle(100);
+        $(".message_container").css("overflow-y", "auto");
 
     });
 

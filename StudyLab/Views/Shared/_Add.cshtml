@@ -1,13 +1,14 @@
-﻿<div class="light_box">
+﻿
+<div class="light_box">
 
     <div class="jumbotron jumbotron-add">
         <div class="close add_close close_button" aria-label="Close">&times;</div>
 
 
-        <form>
+        <form name="AddaQuestion">
             <div class="form-group">
                 <label for="questionText_input">Enter a Question</label>
-                <input type="text" class="form-control center-block" id="questionText_input">
+                <input type="text" class="form-control center-block" name="questionText" id="questionText_input">
             </div>
             <div class="form-group">
                 <label for="type">Category</label>
@@ -16,12 +17,12 @@
             </div>
             <div class="form-group">
                 <label for="answerText_input">Answer</label>
-                <textarea class="form-control center-block" rows="5" id="answerText_input"></textarea>
+                <textarea class="form-control center-block" rows="5" name="answerText" id="answerText_input"></textarea>
             </div>
 
             <button id="submit_form" type="submit" class="btn btn-primary">Submit</button>
         </form>
 
-        @Scripts.Render("~/bundles/jqueryval")
+        
     </div>
 </div>
