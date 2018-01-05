@@ -16,7 +16,7 @@ namespace StudyLab.Migrations
         protected override void Seed(StudyLab.Models.ApplicationDbContext context)
         {
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-            var user = new ApplicationUser { Email = "admin@studylab.com", UserName = "admin@studylab.com" };
+            var user = new ApplicationUser { Email = "admin@studylab.com", UserName = "Administrator" };
             userManager.Create(user, "123456");
 
             // CREATE NEW ROLE (ADMINISTRATOR)

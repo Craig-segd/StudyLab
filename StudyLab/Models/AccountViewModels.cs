@@ -8,6 +8,11 @@ namespace StudyLab.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "The username field is required")]
+        [Display(Name = "Username")]
+        [StringLength(50)]
+        public string Username { get; set; }
     }
 
     public class ExternalLoginListViewModel
@@ -48,10 +53,9 @@ namespace StudyLab.Models
 
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "Enter a valid email address")]
-        [Display(Name = "Email")]
-        [EmailAddress(ErrorMessage = "Enter a valid email address")]
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Username cannot be blank")]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +68,11 @@ namespace StudyLab.Models
 
     public class RegisterViewModel
     {
+        [Required(ErrorMessage = "The username field is required")]
+        [Display(Name = "Username")]
+        [StringLength(50)]
+        public string Username { get; set; }
+
         [Required(ErrorMessage = "The Email field is required.")]
         [EmailAddress(ErrorMessage = "Please enter a valid email.")]
         [Display(Name = "Email")]

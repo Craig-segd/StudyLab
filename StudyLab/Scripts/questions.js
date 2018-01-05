@@ -79,6 +79,8 @@
 
     $("#submit_form").on("click",
         function (data) {
+
+
             $("form[name='AddaQuestion']").
                 validate({
                     rules: {
@@ -94,10 +96,10 @@
             if ($("form[name='AddaQuestion']").valid())
             {
                 $.ajax({
+                async: true,
                 url: "/api/questions",
                 method: "POST",
                 contentType: "application/json",
-                dataType: "json",
                 data: JSON.stringify([
                     {
                         "QuestionText": $("#questionText_input").val(),
@@ -108,8 +110,6 @@
                     $(".light_box").fadeToggle();
                 },
                 error: function () {
-                    data.preventDefault();
-                    console.log("Error");
                 }
             });
             }

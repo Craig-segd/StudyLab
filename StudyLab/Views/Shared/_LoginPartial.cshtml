@@ -8,8 +8,6 @@
 
         <ul class="nav navbar-nav navbar-right">
 
-
-
             <li id="@User.Identity.GetUserId()" class="dropdown email">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.GetUserName()<div class="avatar"></div></a>
 
@@ -26,28 +24,30 @@
         </button>
 
         <div id="@User.Identity.GetUserId()" class="message_container">
-            
+
             <div class="btn-group" role="group" aria-label="...">
                 <button type="button" class="btn btn-default send">Send a message</button>
-                
+
             </div>
             <div class="sendMessage_container">
-                
-                <form>
-                    <div class="form-group">
-                        <label for="senderText_input">To:</label>
-                        <input type="text" class="form-control center-block" id="senderText_input">
-                    </div>
-                    <div class="form-group">
-                        <label for="subjectText_input">Subject:</label>
-                        <input type="text" class="form-control center-block" id="subjectText_input">
-                    </div>
-                    <div class="form-group">
-                        <label for="messageText_input">Message:</label>
-                        <textarea class="form-control center-block" rows="5" id="messageText_input"></textarea>
-                    </div>
 
-                    <button id="submit_messageform" type="submit" class="btn btn-primary">Submit</button>
+                <form>
+                    <div class="successSent"><h2 class="btn btn-success btn-lg">Message Sent!</h2></div>
+                        <div class="form-group">
+                            <label for="senderText_input">To:</label>
+                            <input type="text" class="form-control center-block" id="senderText_input">
+                        </div>
+                        <div class="form-group">
+                            <label for="subjectText_input">Subject:</label>
+                            <input type="text" class="form-control center-block" id="subjectText_input">
+                        </div>
+                        <div class="form-group">
+                            <label for="messageText_input">Message:</label>
+                            <textarea class="form-control center-block" rows="5" id="messageText_input"></textarea>
+                        </div>
+
+                        <button id="submit_messageform" type="button" class="btn btn-default btn-block">Send Message</button>
+                    
                 </form>
 
             </div>

@@ -454,7 +454,8 @@ textarea {
     background-position: center;
     background-size: 35px;
     height: 35px;
-    border-radius:100%;
+    -ms-border-radius:50%;
+    border-radius:50%;
     width: 35px !important;
     display: inline-block;
     margin-top: -15px;
@@ -566,9 +567,10 @@ textarea {
 .sendMessage_container {
     background-color: #f2c279;
     width: 290px;
-    height: 380px;
+    height: 400px;
+    margin-left: -5px;
     display: none;
-    padding: 5px;
+    padding: 10px;
     -ms-border-radius: 5px;
     border-radius: 5px;
 }
@@ -594,4 +596,18 @@ textarea {
 
 #questionText_input-error {
     color: red;
+}
+
+#answerText_input-error {
+    color: red;
+}
+
+.successSent {
+    height: 310px;
+    width: 280px;
+    position: absolute;
+    background-color: rgba(242, 194, 121, 0.7);
+    padding-top: 100px;
+    color: #fff;
+    display: none;
 }
