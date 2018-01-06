@@ -235,8 +235,12 @@ textarea {
     border: none;
 }
 
-/******************************* Jumbotron ******************************/
+.btn-sendMessage {
+    background-color: #e29828; 
+    border: #ecba6e
+}
 
+/******************************* Jumbotron ******************************/
 .jumbotron {
     margin-top: 0px;
 }
@@ -566,13 +570,10 @@ textarea {
 
 .sendMessage_container {
     background-color: #f2c279;
-    width: 290px;
+    width: 295px;
     height: 400px;
-    margin-left: -5px;
     display: none;
     padding: 10px;
-    -ms-border-radius: 5px;
-    border-radius: 5px;
 }
 
 .delete-message {

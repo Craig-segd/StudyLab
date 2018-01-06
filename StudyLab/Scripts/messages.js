@@ -6,37 +6,39 @@ $(".body-content").on("click",
 
     });
 
-GetMessage();
 setInterval(GetMessage, 3000);
 
 $(".messageBtn").on("click",
     function () {
         $(".message_container").slideToggle(100);
-
         GetMessage();
 
     });
 
 
 function GetMessage() {
-    $.ajax({
-        url: ("/api/messages/" + $(".message_container").attr("id")),
-        method: "GET",
-        dataType: "json",
-        success: function (data) {
-            Render(data.length, $(".subject").length);
-            $(".badge").html(data.length);
-            $.each(data,
-                function (index, element) {
-                    $("#subject" + index).text(element.SubjectText);
-                    $("#message" + index).text(element.MessageText);
-                    $(".delete" + index).attr("data-deletemessage-id", element.Id);
-                });
-        },
-        error: function () {
 
-        }
-    });
+    if ($(".email").attr("id") !== undefined) {
+
+        $.ajax({
+            url: ("/api/messages/" + $(".message_container").attr("id")),
+            method: "GET",
+            dataType: "json",
+            success: function(data) {
+                Render(data.length, $(".subject").length);
+                $(".badge").html(data.length);
+                $.each(data,
+                    function(index, element) {
+                        $("#subject" + index).text(element.SubjectText);
+                        $("#message" + index).text(element.MessageText);
+                        $(".delete" + index).attr("data-deletemessage-id", element.Id);
+                    });
+            },
+            error: function() {
+
+            }
+        });
+    }
 }
 
 function Render(a, b) {
