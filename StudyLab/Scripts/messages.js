@@ -29,7 +29,7 @@ function GetMessage() {
                 $(".badge").html(data.length);
                 $.each(data,
                     function(index, element) {
-                        $("#subject" + index).text("Subject: "+ element.SubjectText);
+                        $("#subject" + index).text(element.SubjectText);
                         $("#message" + index).text(element.MessageText);
                         $("#messageTime" + index).text(moment(element.DateTimeSent).format("ddd HH:mm"));
                         $("#messageSender" + index).text("From: " + element.RecieverUsername);
@@ -101,7 +101,37 @@ $("body").on("mouseleave",
 
     });
 
-//************** SEND A MESSAGE **************//
+//****************** SEND A MESSAGE *******************//
+
+var vm = {
+    
+};
+
+var senders = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('UserName'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+        url: '/api/users?query=%QUERY',
+        wildcard: '%QUERY'
+    }
+});
+
+$('#senderText_input').typeahead({
+        minLength: 2,
+        highlight: true
+    },
+    {
+        name: 'AspNetUsers',
+        display: 'UserName',
+        source: senders
+    });
+
+    //}).on("typeahead:select",
+    //function (e, sender) {
+    //    vm.Id = sender.Id;
+    //});
+
+////////////////////////////////////////////////////////
 
 $(".send").on("click",
     function () {
@@ -127,6 +157,9 @@ $("#submit_messageform").on("click",
             ),
             success: function () {
                 $(".successSent").fadeIn(600).delay(1000).fadeOut(600);
+                $("#subjectText_input").val("");
+                $("#messageText_input").val("");
+                $("#senderText_input").val("");
             },
             error: function () {
                 console.log("ISSUE");

@@ -24,6 +24,12 @@ namespace StudyLab.Services
             _context.Messages.Add(dto);
         }
 
+        public IEnumerable<ApplicationUser> GetUsers()
+        {
+            return _context.Users.ToList();
+
+        }
+
         public bool Save()
         {
             try
@@ -54,7 +60,7 @@ namespace StudyLab.Services
 
         public string GetRecieverId(string id)
         {
-            var temp = _context.Users.SingleOrDefault(c => c.UserName == id);
+            var temp = _context.Users.First(c => c.UserName == id);
 
             var result = temp?.Id;
             return result;

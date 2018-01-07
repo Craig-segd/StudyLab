@@ -23,6 +23,7 @@ namespace StudyLab
                       "~/Scripts/bootbox.js",
                       "~/Scripts/jasny-bootstrap.js",
                       "~/Scripts/toastr.js",
+                      "~/Scripts/typeahead.bundle.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/questions").Include(
@@ -42,6 +43,7 @@ namespace StudyLab
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap-united.css",
                       "~/Content/toastr.css",
+                      "~/Content/typeahead.css",
                       "~/Content/bootstrap-social.css",
                       "~/Content/jasny-bootstrap.css",
                       "~/Content/site.css"));

@@ -7,6 +7,7 @@ namespace StudyLab.Services
     {
         IEnumerable<Message> RecieveMessages(string reciever);
         void SendMessage(Message dto);
+        IEnumerable<ApplicationUser> GetUsers();
         bool Save();
         void DeleteMessage(int id);
         string GetRecieverUsername(string id);

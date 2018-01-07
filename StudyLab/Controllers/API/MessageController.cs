@@ -3,6 +3,7 @@ using StudyLab.Models;
 using StudyLab.Models.Dtos;
 using StudyLab.Services;
 using System;
+using System.Linq;
 using System.Web.Http;
 
 namespace StudyLab.Controllers.API
@@ -24,6 +25,22 @@ namespace StudyLab.Controllers.API
             var result = _repository.RecieveMessages(reciever);
 
             return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("api/users")]
+        public IHttpActionResult GetUsers(string query = null)
+        {
+            var userQuery = _repository.GetUsers();
+
+            if (!string.IsNullOrWhiteSpace(query))
+                userQuery = userQuery
+                    .Where(c => c.UserName.ToLower()
+                        .Contains(query.ToLower()));
+
+
+            return Ok(userQuery);
+
         }
 
         [HttpPost]

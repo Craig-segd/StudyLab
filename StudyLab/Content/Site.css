@@ -589,7 +589,7 @@ textarea {
     background-color: #f2c279;
     width: 295px;
     height: 400px;
-    display: none;
+    display:none;
     padding: 10px;
 }
 
@@ -646,4 +646,12 @@ textarea {
     width: 50%;
     text-align: left;
     padding-left: 6px;
+}
+
+.tt-menu {
+    width: 185px;
+}
+
+.tt-input {
+    width: 275px;
 }
