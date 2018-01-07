@@ -550,7 +550,7 @@ textarea {
     .message_container {
         margin-top: 5vh;
         width: 320px;
-        max-height: 80vh;
+        max-height: 50vh;
         left: -3px;
         right: 0;
         margin: auto;
@@ -570,11 +570,12 @@ textarea {
 }
 
 .message {
-    font-size: 12px;
+    font-size: 13px;
     text-align: justify;
     max-height: 50px;
     overflow:hidden;
     margin-bottom: 10px;
+    padding: 10px 15px 0 15px;
 
 }
 
@@ -627,4 +628,22 @@ textarea {
     padding-top: 100px;
     color: #fff;
     display: none;
+}
+
+.mc {
+    border-bottom: 1px solid #dddddd;
+    background-color: #eee;
+    display: none;
+}
+
+.mt {
+    width: 50%;
+    text-align: right;
+    padding-right: 6px;
+}
+
+.ms {
+    width: 50%;
+    text-align: left;
+    padding-left: 6px;
 }

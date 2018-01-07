@@ -30,7 +30,8 @@ namespace StudyLab
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/messages").Include(
-                "~/Scripts/messages.js"
+                "~/Scripts/messages.js",
+                "~/Scripts/moment.js"
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/avatar").Include(

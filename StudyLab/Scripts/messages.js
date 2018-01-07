@@ -29,8 +29,10 @@ function GetMessage() {
                 $(".badge").html(data.length);
                 $.each(data,
                     function(index, element) {
-                        $("#subject" + index).text(element.SubjectText);
+                        $("#subject" + index).text("Subject: "+ element.SubjectText);
                         $("#message" + index).text(element.MessageText);
+                        $("#messageTime" + index).text(moment(element.DateTimeSent).format("ddd HH:mm"));
+                        $("#messageSender" + index).text("From: " + element.RecieverUsername);
                         $(".delete" + index).attr("data-deletemessage-id", element.Id);
                     });
             },
@@ -56,7 +58,7 @@ function Render(a, b) {
                 "<div id='subject" +
                 i +
                 "' class='panel-heading subject'></div>" +
-                "<div id='message" +
+                "<div class='mc' id='messageContainer'><div class='ms' id='messageSender" + i + "'></div><div class='mt' id='messageTime" + i + "'></div></div><div id='message" +
                 i +
                 "' class='panel-body message'></div></div>");
         }
@@ -70,13 +72,17 @@ $("body").on("click",
     function (data) {
         var check = $(this).next().css("overflow");
         if (check === "hidden") {
+            $(this).next().css("display", "none");
             $(this).next().css("overflow", "initial");
             $(this).next().css("max-height", "initial");
             $(this).next().css("margin-bottom", "0px");
+            
         } else {
+            $(this).next().css("display", "flex");
             $(this).next().css("overflow", "hidden");
             $(this).next().css("max-height", "50px");
-            $(this).next().css("margin-bottom", "10px");
+            $(this).next().css("margin-bottom", "5px");
+            
         }
     });
 
