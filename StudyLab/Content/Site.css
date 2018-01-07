@@ -44,6 +44,10 @@ textarea {
     max-width: 280px;
 }
 
+.dropdown-menu {
+    text-align: center;
+}
+
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     color: #ffffff;
     text-decoration: none;
@@ -100,23 +104,29 @@ textarea {
     box-shadow: inset 0 -2px 0 #eae7e3 !important;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar-logo {
         margin-left: 17px;
         margin-right: -7px;
     }
     .navbar-right {
         display:flex;
+        -ms-align-items: center;
+        -o-align-items: center;
+        -webkit-align-items: center;
         align-items: center;
+        -o-justify-content: center;
+        -webkit-justify-content: center;
         justify-content: center;
-        
+        display: block;
     }
+
     p, h1 {
         text-align: center;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
 .navbar-nav > li > a {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -143,6 +153,8 @@ textarea {
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: #fff;
+    overflow: hidden;
+    max-height: 700px;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -153,7 +165,7 @@ textarea {
     border-color: #fff;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #ffffff;
         background-color: #f2c279;
@@ -251,6 +263,43 @@ textarea {
         padding-bottom: 28px;
     }
 
+    .jumbotron-add {
+        left: 33%;
+        width: 30%;
+        padding-top: 50px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron-settings {
+        text-align: center;
+    }
+
+    .message_container {
+        border-top: 1px solid #e29828;
+    }
+
+    .jumbotron-add {
+        left: 10%;
+        width: 80%;
+        padding-top: 50px;
+    }
+
+    .jumbotron-login {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+
+    .jumbotron-register {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        padding-bottom: 30px;
+    }
+
+    .centerRegister {
+        width: 90% !important;
+    }
 }
 
 .jumbotron-questions {
@@ -270,15 +319,7 @@ textarea {
     padding-bottom: 40px;
 }
 
-@media screen and (max-width: 768px) {
-    .jumbotron-settings {
-        text-align: center;
-    }
 
-    .message_container {
-        border-top: 1px solid #e29828;
-    }
-}
 
 .jumbotron-add {
     -webkit-box-shadow: 4px 3px 23px -5px rgba(0,0,0,0.58);
@@ -289,37 +330,6 @@ textarea {
     height: auto;
     padding-right: 40px !important;
     padding-left: 40px !important;
-}
-
-@media screen and (max-width: 768px) {
-    .jumbotron-add {
-        left: 10%;
-        width: 80%;
-        padding-top: 50px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .jumbotron-add {
-        left: 33%;
-        width: 30%;
-        padding-top: 50px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .jumbotron-login {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .jumbotron-register {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        padding-bottom: 30px;
-    }
 }
 
 .addQuestion:hover {
@@ -430,12 +440,6 @@ textarea {
     margin: auto;
 }
 
-@media screen and (max-width: 768px) {
-    .centerRegister {
-        width: 90% !important;
-    }
-}
-
 .jumbotron-login {
     margin-top: 50px;
     padding-top: 0px;
@@ -479,9 +483,7 @@ textarea {
     width: 120px !important;
     -ms-background-size: 100px !important;
     background-size: 100px !important;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    margin: 0px;
     -ms-border-radius: 0%;
     border-radius: 0%;
 }
@@ -546,7 +548,16 @@ textarea {
 
 @media screen and (max-width: 768px) {
     .message_container {
-        margin-top: 20vh;
+        margin-top: 5vh;
+        width: 320px;
+        max-height: 80vh;
+        left: -3px;
+        right: 0;
+        margin: auto;
+    }
+
+    .messageBtn {
+        margin-bottom: 10px;
     }
 }
 

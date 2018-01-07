@@ -116,11 +116,10 @@ $("#submit_messageform").on("click",
                     "SubjectText": $("#subjectText_input").val(),
                     "MessageText": $("#messageText_input").val(),
                     "SenderId": $(".message_container").attr("id"),
-                    "RecieverId": $("#senderText_input").val() /*"31ba4fb1-62c2-40c9-a0f4-f82a60f66c99"*/
+                    "RecieverUsername": $("#senderText_input").val() /*"b60fcf10-e082-4fe2-9a89-6d5b52820857"*/
                 }
             ),
             success: function () {
-                console.log($(this));
                 $(".successSent").fadeIn(600).delay(1000).fadeOut(600);
             },
             error: function () {

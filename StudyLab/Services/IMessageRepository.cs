@@ -9,5 +9,7 @@ namespace StudyLab.Services
         void SendMessage(Message dto);
         bool Save();
         void DeleteMessage(int id);
+        string GetRecieverUsername(string id);
+        string GetRecieverId(string id);
     }
 }

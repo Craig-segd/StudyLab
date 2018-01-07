@@ -23,5 +23,9 @@ namespace StudyLab.Models
         [ForeignKey("Sender")]
         public string SenderId { get; set; }
         public ApplicationUser Sender { get; set; }
+
+        [Required(ErrorMessage = "Please enter a username")]
+        public string RecieverUsername { get; set; }
+
     }
 }

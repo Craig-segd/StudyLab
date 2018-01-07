@@ -43,5 +43,21 @@ namespace StudyLab.Services
 
             _context.Messages.Remove(result);
         }
+
+        public string GetRecieverUsername(string id)
+        {
+            var temp = _context.Users.SingleOrDefault(c => c.Id == id);
+
+            var result = temp?.UserName;
+            return result;
+        }
+
+        public string GetRecieverId(string id)
+        {
+            var temp = _context.Users.SingleOrDefault(c => c.UserName == id);
+
+            var result = temp?.Id;
+            return result;
+        }
     }
 }

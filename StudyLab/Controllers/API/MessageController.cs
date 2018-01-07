@@ -14,6 +14,7 @@ namespace StudyLab.Controllers.API
         public MessageController(IMessageRepository repository)
         {
             _repository = repository;
+
         }
 
         [HttpGet]
@@ -33,7 +34,14 @@ namespace StudyLab.Controllers.API
             if (!ModelState.IsValid)
                 return BadRequest();
 
+            var recieverId = _repository.GetRecieverId(dto.RecieverUsername);
+
+            if (recieverId == null)
+                return NotFound();
+
+            dto.RecieverId = recieverId;
             dto.DateTimeSent = DateTime.Now;
+            dto.RecieverUsername = _repository.GetRecieverUsername(dto.RecieverId);
 
             var result = Mapper.Map<Message>(dto);
 
@@ -43,9 +51,8 @@ namespace StudyLab.Controllers.API
             _repository.SendMessage(result);
 
             if (!_repository.Save())
-            {
                 return BadRequest();
-            }
+
 
             return Ok();
         }

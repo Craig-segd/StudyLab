@@ -15,5 +15,7 @@ namespace StudyLab.Models.Dtos
 
         public string RecieverId { get; set; }
 
+        public string RecieverUsername { get; set; }
+
     }
 }

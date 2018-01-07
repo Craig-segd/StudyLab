@@ -289,6 +289,10 @@
     <Compile Include="Migrations\201801050141509_MessageRequired.Designer.cs">
       <DependentUpon>201801050141509_MessageRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801070118458_AddUserNameModel.cs" />
+    <Compile Include="Migrations\201801070118458_AddUserNameModel.Designer.cs">
+      <DependentUpon>201801070118458_AddUserNameModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -449,6 +453,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801050141509_MessageRequired.resx">
       <DependentUpon>201801050141509_MessageRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801070118458_AddUserNameModel.resx">
+      <DependentUpon>201801070118458_AddUserNameModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
