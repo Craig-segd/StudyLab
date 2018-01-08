@@ -301,6 +301,7 @@
     <Compile Include="Models\Dtos\QuestionDto.cs" />
     <Compile Include="Models\Dtos\QuestionUpdateDto.cs" />
     <Compile Include="Models\Dtos\TypeDto.cs" />
+    <Compile Include="Models\Dtos\UserDto.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Message.cs" />

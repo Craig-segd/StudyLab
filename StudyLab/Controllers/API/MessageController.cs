@@ -3,6 +3,7 @@ using StudyLab.Models;
 using StudyLab.Models.Dtos;
 using StudyLab.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
@@ -38,8 +39,17 @@ namespace StudyLab.Controllers.API
                     .Where(c => c.UserName.ToLower()
                         .Contains(query.ToLower()));
 
+            var temp = new List<UserDto>(); // Temporary list of question objects
 
-            return Ok(userQuery);
+            foreach (var user in userQuery) // For each loop for interating through each question
+            {
+                temp.Add(Mapper.Map<UserDto>(user)); // Map each dto to a Question type
+            }
+
+
+            return Ok(temp);
+
+            //return Ok(userQuery);
 
         }
 
