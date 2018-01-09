@@ -248,3 +248,4 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Re
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.Cryptography.Primitives.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Collections.Immutable.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.csprojResolveAssemblyReference.cache

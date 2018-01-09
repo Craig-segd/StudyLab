@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace StudyLab
 {
@@ -9,6 +6,11 @@ namespace StudyLab
     {
         public static void Register(HttpConfiguration config)
         {
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings
+                .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            GlobalConfiguration.Configuration.Formatters
+                .Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
+
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
