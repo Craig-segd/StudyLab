@@ -26,6 +26,15 @@ namespace StudyLab
                       "~/Scripts/typeahead.bundle.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jsx").Include(
+                "~/Scripts/admin.jsx"
+            ));
+
+            bundles.Add(new ScriptBundle("~/bundles/react").Include(
+                "~/Scripts/react.development.js",
+                "~/Scripts/react-dom.development.js"
+            ));
+
             bundles.Add(new ScriptBundle("~/bundles/questions").Include(
                 "~/Scripts/questions.js"
                 ));
@@ -47,6 +56,13 @@ namespace StudyLab
                       "~/Content/bootstrap-social.css",
                       "~/Content/jasny-bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/admin-css").Include(
+                "~/Content/bootstrap-united.css",
+                "~/Content/jasny-bootstrap.css",
+                "~/Content/adminStyle.css"
+
+                ));
         }
     }
 }

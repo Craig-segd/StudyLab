@@ -15,6 +15,11 @@ namespace StudyLab.Services
             _context = new ApplicationDbContext();
         }
 
+        public IEnumerable<Question> GetAllQuestions()
+        {
+            return _context.Questions.ToList();
+        }
+
         public IEnumerable<Question> GetQuestions(string tId)
         {
             return _context.Questions.Where(c => c.Type.Name == tId).ToList();

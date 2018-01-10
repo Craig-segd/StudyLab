@@ -18,6 +18,15 @@ namespace StudyLab.Controllers.API
             _repository = repository;
         }
 
+        [HttpGet]
+        [Route("api/questions")]
+        public IHttpActionResult GetQuestions()
+        {
+            var result = _repository.GetAllQuestions();
+
+            return Ok(result);
+        }
+
         [HttpGet] // Specifies the HTTP method
         [Route("api/questions/{tId}")] // Specifies the route URI using attribute routing
 

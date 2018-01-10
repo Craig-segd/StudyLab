@@ -6,6 +6,7 @@ namespace StudyLab.Services
 {
     public interface IQuestionRepository
     {
+        IEnumerable<Question> GetAllQuestions();
         IEnumerable<Question> GetQuestions(string tId);
         Question GetQuestion(int id, string tId);
         void DeleteQuestion(int id, string tId);
