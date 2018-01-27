@@ -108,6 +108,8 @@ textarea {
     margin: 0 5px 0 0;
 }
 
+
+
 @media (max-width: 767px) {
     .navbar-logo {
         margin-left: 17px;
@@ -123,6 +125,11 @@ textarea {
         -webkit-justify-content: center;
         justify-content: center;
         display: block;
+        
+    }
+    .navbar-right-noauth {
+        display: grid;
+        margin-left: 4px;
     }
 
     p, h1 {

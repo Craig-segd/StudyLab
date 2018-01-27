@@ -59,7 +59,7 @@
 }
 else
 {
-    <ul id="@User.Identity.GetUserId()" class="nav navbar-nav navbar-right">
+    <ul id="@User.Identity.GetUserId()" class="nav navbar-nav navbar-right navbar-right-noauth">
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-primary navbar-btn nav-login" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary navbar-btn nav-login" })</li>
     </ul>

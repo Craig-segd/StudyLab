@@ -27,7 +27,7 @@ namespace StudyLab
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jsx").Include(
-                "~/Scripts/admin.jsx"
+                "~/Scripts/jsx/admin.jsx"
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/react").Include(

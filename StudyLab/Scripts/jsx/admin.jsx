@@ -1,16 +1,4 @@
-﻿//var NavbarPills = function () {
-//    return (
-//        <div className="navtop">
-//        <ul className="nav nav-pills">
-//            <li role="presentation" className="active"><a href="#">Home</a></li>
-//            <li role="presentation"><a href="#">Cakes</a></li>
-//            <li role="presentation"><a href="#">Users</a></li>
-//        </ul>
-//            </div>
-//    );
-//}
-
-
+﻿
 var divStyle = {
     textAlign: "center",
     marginLeft: "5px"
