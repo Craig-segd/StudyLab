@@ -20,12 +20,15 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\Microsoft
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\Microsoft.VisualBasic.Core.targets
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\Microsoft.Win32.Primitives.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.AppContext.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Collections.Immutable.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Console.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Diagnostics.Process.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Diagnostics.StackTrace.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.Compression.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.Primitives.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.Pipes.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Reflection.Metadata.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Security.AccessControl.dll
@@ -268,6 +271,3 @@ E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.c
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.csproj.CoreCompileInputs.cache
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.dll
 E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\obj\Debug\StudyLab.pdb
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.dll
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.IO.FileSystem.Primitives.dll
-E:\Repository-Content\c-sharp\C#\StudyLab\StudyLab\StudyLab\bin\roslyn\System.Collections.Immutable.dll
